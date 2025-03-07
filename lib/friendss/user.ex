@@ -11,6 +11,6 @@ defmodule Friendss.User do
   def changeset(user, attrs) do
     user
     |> cast(attrs, [:name])
-    |> cast_embed(:profile)
+    |> cast_embed(:profile,   required: true)
   end
 end
